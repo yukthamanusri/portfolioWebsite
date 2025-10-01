@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam's desktop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {darkMode: 'class',}
+    </script>
+    <link rel="stylesheet" href="assets/style.css">
+
+  </head>
+  <body class="min-h-screen flex flex-col light-bg">
+
+    <!-- Header -->
+    <header>
+      <div class="flex items-center top-0 mt-8 ml-6 " >
+         <!-- Sun Icon -->
+        <button class="mr-2" id="themeToggle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-brightness-high-fill text-orange-400 dark:text-yellow-300"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+            />
+          </svg>
+        </button>
+        <!-- Volume Icon -->
+        <button class="volume" id="audio">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-volume-off-fill text-indigo-900 dark:text-white "
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M10.717 3.55A.5.5 0 0 1 11 4v8a.5.5 0 0 1-.812.39L7.825 10.5H5.5A.5.5 0 0 1 5 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06"
+            />
+            </svg>
+        </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Centered -->
+    <main class="flex-1 flex flex-col items-center justify-end mb-7 pb-6 ">
+      <!-- Main Box -->
+      <section
+        class="relative border-2 dark:border-white dark:bg-[#132135] rounded-md h-[480px] w-[800px] bg-white  border-gray-400 shadow-xl"
+      >
+        <!-- Alien Icon (top-left inside box) -->
+       <button id="alienBtn" class="absolute -top-28 -left-5 hover:scale-105 hover:drop-shadow-lg hover:drop-shadow-green-100">
+          <img
+            src="assets/images/alien.png"
+            alt="my icon"
+            class="w-28 h-28"
+          />
+        </button>
+
+         <!-- Header inside container -->
+        <div class="flex items-center dark:rounded-md h-14 bg-gray-500 dark:bg-black shadow-lg border-b-2">
+          <h1 class="text-white pl-5 font-medium text-lg dark:text-white">Home</h1>
+        </div>
+          
+          <div class="grid grid-flow-row justify-items-center mt-20 mb-20 ">
+            <h1 class="text-7xl font-sans  mb-5 dark:text-white ">hi! <span class="dark:text-[#d6edee] text-[#f59300] font-semibold">i'm sam</span></h1>
+            <p class="text-xl text-gray-800 dark:text-white">UI/UX Explorer • Backend Builder • AI Dreamer</p>
+          </div>
+
+          <!-- Navigation buttons -->
+          <div class="flex gap-8 justify-center ">
+
+           <button class="nav-btn hover:scale-105 active:scale-90" data-page="about">
+            <div class="flex-col justify-items-center">
+              <img src="assets/images/about.png" class="size-16 drop-shadow-xl ">
+              <h3 class="mt-2 dark:text-white">About</h3>
+            </div>
+          </button>
+          
+             <button class="nav-btn hover:scale-105 active:scale-90" data-page="work">
+            <div class="flex-col justify-items-center">
+              <img src="assets/images/code.png" class="size-16 drop-shadow-xl"/>
+            <h3 class="mt-2 dark:text-white">Work</h3>
+            </div>
+            </button>
+
+            <button class="nav-btn hover:scale-105 active:scale-90" data-page="certi">
+            <div class="flex-col justify-items-center">
+              <img src="assets/images/certi.png" class="size-16 drop-shadow-xl">
+               <h3 class="mt-2 dark:text-white">Certificates</h3>
+            </div>   
+            </button>
+
+            <button class="nav-btn hover:scale-105 active:scale-90" data-page="extras">
+            <div class="flex-col justify-items-center">
+              <img src="assets/images/extra.png" class="size-16 drop-shadow-xl">
+              <h3 class="mt-2 dark:text-white">Extras</h3>
+            </div>
+            </button>
+
+           <button class="nav-btn hover:scale-105 active:scale-90" data-page="contact">
+            <div class="flex-col justify-items-center">
+              <img src="assets/images/contact.png" class="size-16 drop-shadow-xl">
+               <h3 class="mt-2 dark:text-white">Contact</h3>
+            </div>
+           </button>
+
+          </div>
+      </section>
+    </main>
+
+        <!-- ===== Overlay + Modal Container (empty, filled dynamically) ===== -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden z-40 flex items-center justify-center"
+    >
+      <div
+        id="modal"
+        class="bg-white rounded-2xl shadow-2xl border border-gray-200 max-w-[95%] max-h-[90vh] overflow-auto"
+      >
+        <div id="modal-content"><!-- injected content --></div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+
+  </body>
+</html>
